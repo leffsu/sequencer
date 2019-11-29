@@ -14,7 +14,7 @@ class SoundController(private val context: Context?) { // контекст ну�
     var bpm: Int = 140
 
     // Счетчик текущего элемента
-    private var period = 0
+    private var period = 15
 
     // Максимальный индекс элемента
     private val PERIOD_MAX = 15
@@ -54,20 +54,20 @@ class SoundController(private val context: Context?) { // контекст ну�
         ),
         SoundEntity(
             R.color.color5,
-            R.drawable.ic_note,
-            R.raw.hat,
+            R.drawable.ic_clap,
+            R.raw.clap,
             context
         ),
         SoundEntity(
             R.color.color6,
-            R.drawable.ic_note,
-            R.raw.moog,
+            R.drawable.ic_crash,
+            R.raw.crash,
             context
         ),
         SoundEntity(
             R.color.color7,
-            R.drawable.ic_note,
-            R.raw.perc,
+            R.drawable.slice_1,
+            R.raw.drum_electric_tom,
             context
         ),
         SoundEntity(
