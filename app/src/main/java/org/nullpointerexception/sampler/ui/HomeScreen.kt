@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
+import com.huhx0015.hxaudio.audio.HXSound
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.overlay_bpm.*
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper
@@ -25,6 +26,9 @@ class HomeScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        HXSound.engines(20)
+        HXSound.logging(true)
 
         timers = arrayOf(
             imgTimerBeat1, imgTimerBeat2,

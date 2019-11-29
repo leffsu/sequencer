@@ -2,15 +2,13 @@ package org.nullpointerexception.sampler.entity
 
 import android.content.Context
 import android.media.SoundPool
+import com.huhx0015.hxaudio.audio.HXMusic
+import com.huhx0015.hxaudio.audio.HXSound
 
 class SoundEntity(
     val activeColorResId: Int, val icon: Int,
-    resource: Int, private val context: Context?) {
+    val resource: Int, private val context: Context?) {
 
-    // ошибка -12
-    private val soundPool = SoundPool(1, 3, 0)
-
-    private val soundId = soundPool.load(context, resource, 1)
     val array = arrayOf(
         false /* 1/16 */, false /* 1/8 */, false, false, //1/4
         false, false, false, false, //1/2
@@ -19,6 +17,6 @@ class SoundEntity(
     )
 
     fun play() {
-        soundPool.play(soundId, 1f, 1f, 10, 0, 1f)
+        HXSound.sound().load(resource).play(context)
     }
 }

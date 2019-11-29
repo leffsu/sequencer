@@ -8,7 +8,7 @@ import org.json.JSONObject
 object NetworkController {
 
     // Ссылка
-    val url = "http://89.40.3.208:3000"
+    val url = "http://172.20.10.4:3000"
 
     // Инстанс сокета (раскомментируйте, если будет сокет, иначе краш)
     private var socket: Socket = IO.socket(url)

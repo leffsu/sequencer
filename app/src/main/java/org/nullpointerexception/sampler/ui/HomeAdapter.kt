@@ -19,6 +19,7 @@ class HomeAdapter(private val soundList: List<SoundEntity>) :
         holder.listen { position, beat, type ->
             println("BEAT CLICKED $position $beat")
             val array = soundList[position].array
+            soundList[position].play()
             // Переключение бита
             array[beat] = !array[beat]
             notifyItemChanged(position)
