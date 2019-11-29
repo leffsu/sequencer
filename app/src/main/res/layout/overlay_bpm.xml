@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:alpha="0.2"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.111" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.166" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.222" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.277" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.388" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.444" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.555" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.611" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.722" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.777" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.833" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.888" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.944" />
+
+    <View
+        android:id="@+id/imgTimerBeat1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl1"
+        app:layout_constraintRight_toLeftOf="@id/gl2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl2"
+        app:layout_constraintRight_toLeftOf="@id/gl3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl3"
+        app:layout_constraintRight_toLeftOf="@id/gl4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl4"
+        app:layout_constraintRight_toLeftOf="@id/gl5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl5"
+        app:layout_constraintRight_toLeftOf="@id/gl6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="@id/gl6"
+        app:layout_constraintRight_toLeftOf="@id/gl7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl7"
+        app:layout_constraintRight_toLeftOf="@id/gl8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl8"
+        app:layout_constraintRight_toLeftOf="@id/gl9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl9"
+        app:layout_constraintRight_toLeftOf="@id/gl10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl10"
+        app:layout_constraintRight_toLeftOf="@id/gl11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl11"
+        app:layout_constraintRight_toLeftOf="@id/gl12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl12"
+        app:layout_constraintRight_toLeftOf="@id/gl13"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl13"
+        app:layout_constraintRight_toLeftOf="@id/gl14"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl14"
+        app:layout_constraintRight_toLeftOf="@id/gl15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl15"
+        app:layout_constraintRight_toLeftOf="@id/gl16"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/imgTimerBeat16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/gl16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
