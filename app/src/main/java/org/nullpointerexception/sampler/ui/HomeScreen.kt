@@ -37,8 +37,6 @@ class HomeScreen : AppCompatActivity() {
             imgTimerBeat15, imgTimerBeat16
         )
 
-        NetworkController.init()
-
         // регаемся на ивенты таймера
         EventBus.getDefault().register(this)
 
@@ -87,6 +85,11 @@ class HomeScreen : AppCompatActivity() {
             recycler.adapter?.notifyDataSetChanged()
         }
         updateBPM()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        NetworkController.init()
     }
 
     private fun updateBPM() {

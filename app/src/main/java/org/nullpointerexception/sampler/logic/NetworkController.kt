@@ -8,7 +8,7 @@ import org.json.JSONObject
 object NetworkController {
 
     // Ссылка
-    val url = "http://10.0.2.2:3000"
+    val url = "http://89.40.3.208:3000"
 
     // Инстанс сокета (раскомментируйте, если будет сокет, иначе краш)
     private var socket: Socket = IO.socket(url)
@@ -25,12 +25,13 @@ object NetworkController {
     private val socketEvent = "change"
 
     fun init(){
-        // подключаемся
-        socket.connect()
-
         socket.on("connection") {
             println("\r\n\r\nsocket connected")
         }
+
+        // подключаемся
+        socket.connect()
+
     }
 
     fun sendToServer(array: ArrayList<Boolean>, test: Boolean) {
