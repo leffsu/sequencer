@@ -3,7 +3,9 @@ package org.nullpointerexception.sampler.entity
 import android.content.Context
 import android.media.SoundPool
 
-class SoundEntity(val activeColorResId: Int, val icon: Int, resource: Int, private val context: Context?) {
+class SoundEntity(
+    val activeColorResId: Int, val icon: Int,
+    resource: Int, private val context: Context?) {
 
     // ошибка -12
     private val soundPool = SoundPool(1, 3, 0)

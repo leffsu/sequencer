@@ -30,26 +30,26 @@ class SoundController(private val context: Context?) { // контекст ну�
         // Создаем сущности инструментов, которые внутри себя все загрузят
         SoundEntity(
             R.color.color1,
-            R.drawable.ic_note,
+            R.drawable.ic_kick,
             R.raw.bass,
             context
         ),
         SoundEntity(
             R.color.color2,
-            R.drawable.ic_note,
-            R.raw.clap,
+            R.drawable.ic_snare,
+            R.raw.snare,
             context
         ),
         SoundEntity(
             R.color.color3,
-            R.drawable.ic_note,
-            R.raw.claves,
+            R.drawable.ic_cymbal,
+            R.raw.drum_acoustic_hat_1,
             context
         ),
         SoundEntity(
             R.color.color4,
-            R.drawable.ic_note,
-            R.raw.click,
+            R.drawable.ic_hihat1,
+            R.raw.hat,
             context
         ),
         SoundEntity(
@@ -72,74 +72,74 @@ class SoundController(private val context: Context?) { // контекст ну�
         ),
         SoundEntity(
             R.color.color8,
-            R.drawable.ic_note,
-            R.raw.snare,
+            R.drawable.ic_c,
+            R.raw.c,
             context
         ),
         SoundEntity(
             R.color.color9,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_csharp,
+            R.raw.csharp,
             context
         ),
         SoundEntity(
             R.color.color10,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_d,
+            R.raw.d,
             context
         ),
         SoundEntity(
             R.color.color11,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_dsharp,
+            R.raw.dsharp,
             context
         ),
         SoundEntity(
             R.color.color12,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_e,
+            R.raw.e,
             context
         ),
         SoundEntity(
             R.color.color13,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_f,
+            R.raw.f,
             context
         ),
         SoundEntity(
             R.color.color14,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_fsharp,
+            R.raw.fsharp,
             context
         ),
         SoundEntity(
             R.color.color15,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_g,
+            R.raw.g,
             context
         ),
         SoundEntity(
             R.color.color16,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_gsharp,
+            R.raw.gsharp,
             context
         ),
         SoundEntity(
             R.color.color17,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_a,
+            R.raw.a,
             context
         ),
         SoundEntity(
             R.color.color18,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_asharp,
+            R.raw.asharp,
             context
         ),
         SoundEntity(
             R.color.color19,
-            R.drawable.ic_note,
-            R.raw.synthtwo,
+            R.drawable.ic_b,
+            R.raw.b,
             context
         )
     )
