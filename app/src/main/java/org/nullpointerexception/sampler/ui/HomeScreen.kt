@@ -16,6 +16,7 @@ import org.nullpointerexception.sampler.R
 import org.nullpointerexception.sampler.event.PeriodChangeEvent
 import org.nullpointerexception.sampler.logic.NetworkController
 import org.nullpointerexception.sampler.logic.SoundController
+import java.util.*
 
 class HomeScreen : AppCompatActivity() {
 
@@ -58,6 +59,10 @@ class HomeScreen : AppCompatActivity() {
             }
         }
 
+        btnShuffle.setOnClickListener {
+            shuffle()
+        }
+
         // кнопка плюс
         btnPlus.setOnClickListener {
             soundController?.bpm?.let { bpm ->
@@ -76,11 +81,11 @@ class HomeScreen : AppCompatActivity() {
         btnPlay.setOnClickListener {
             // если играет - стоп, если на паузе - играть
             if (soundController?.playing == true) {
-                btnPlay.setImageResource(R.drawable.ic_play)
+                btnPlay.setImageResource(R.drawable.ic_newplay)
                 soundController?.pause()
                 removeTimers()
             } else {
-                btnPlay.setImageResource(R.drawable.ic_pause)
+                btnPlay.setImageResource(R.drawable.ic_newpause)
                 soundController?.play()
             }
         }
@@ -89,6 +94,39 @@ class HomeScreen : AppCompatActivity() {
             recycler.adapter?.notifyDataSetChanged()
         }
         updateBPM()
+    }
+
+    fun shuffle() {
+        for (s in 0..6) {
+            if (Random().nextBoolean()) {
+
+                if (Random().nextBoolean()) {
+                    soundController?.soundEntities?.get(s)!!.array = arrayOf<Boolean>(
+                        true, false, true, false, true, false, true, false,
+                        true, false, true, false, true, false, true, false
+                    )
+                } else {
+
+                    if (Random().nextBoolean()) {
+                        soundController?.soundEntities?.get(s)!!.array = arrayOf<Boolean>(
+                            false, true, false, true, false, true, false, true,
+                            false, true, false, true, false, true, false, true
+                        )
+                    } else {
+                        soundController?.soundEntities?.get(s)!!.array = arrayOf<Boolean>(
+                            false, true, true, false, false, true, true, false,
+                            false, true, true, false, false, true, true, false
+                        )
+                    }
+                }
+            } else {
+                soundController?.soundEntities?.get(s)!!.array = arrayOf<Boolean>(
+                    false, false, false, false, false, false, false, false,
+                    false, false, false, false, false, false, false, false
+                )
+            }
+        }
+        recycler.adapter?.notifyDataSetChanged()
     }
 
     override fun onResume() {

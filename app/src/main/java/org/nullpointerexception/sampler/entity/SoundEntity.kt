@@ -9,7 +9,7 @@ class SoundEntity(
     val activeColorResId: Int, val icon: Int,
     val resource: Int, private val context: Context?) {
 
-    val array = arrayOf(
+    var array = arrayOf(
         false /* 1/16 */, false /* 1/8 */, false, false, //1/4
         false, false, false, false, //1/2
         false, false, false, false,
