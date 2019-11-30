@@ -14,7 +14,7 @@ class SoundController(private val context: Context?) { // контекст ну�
     var bpm: Int = 140
 
     // Счетчик текущего элемента
-    private var period = 15
+    private var period = 0
 
     // Максимальный индекс элемента
     private val PERIOD_MAX = 15
@@ -188,7 +188,7 @@ class SoundController(private val context: Context?) { // контекст ну�
                 }
 
                 NetworkController.sendToServer(
-                    booleanArrayToSendToNetwork, true
+                    booleanArrayToSendToNetwork, false
                 )
 
                 // Кидаем в очередь
