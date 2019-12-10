@@ -18,6 +18,11 @@ import su.leffsu.sequencer.event.PeriodChangeEvent
 import su.leffsu.sequencer.logic.NetworkController
 import su.leffsu.sequencer.logic.SoundController
 import java.util.*
+import android.util.DisplayMetrics
+import org.leffsu.sequencer.BuildConfig
+import su.leffsu.sequencer.cellMargin
+import su.leffsu.sequencer.cellSize
+import su.leffsu.sequencer.cellSpaceParam
 
 
 class HomeScreen : AppCompatActivity() {
@@ -26,15 +31,26 @@ class HomeScreen : AppCompatActivity() {
 
     private var timers = arrayOf<View>()
 
-    var currentApiVersion = 0
+    private var currentApiVersion = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         hideNavigationBar()
         setContentView(R.layout.activity_home)
 
-        HXSound.engines(20)
-        HXSound.logging(true)
+        setupTimerViews()
+
+        // регаемся на ивенты таймера
+        EventBus.getDefault().register(this)
+
+        calculateCellSize()
+        setupSound()
+        setupRecycler()
+        setupButtons()
+        updateBPM()
+    }
+
+    private fun setupTimerViews() {
 
         timers = arrayOf(
             imgTimerBeat1, imgTimerBeat2,
@@ -46,11 +62,31 @@ class HomeScreen : AppCompatActivity() {
             imgTimerBeat13, imgTimerBeat14,
             imgTimerBeat15, imgTimerBeat16
         )
+    }
 
-        // регаемся на ивенты таймера
-        EventBus.getDefault().register(this)
+    private fun calculateCellSize() {
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val screenWidth = displayMetrics.widthPixels
+        /*
+        From 1920:1080
+        113 - space
+        105 - available for cell
+        8 - margin
+         */
+        val cellSizeWithoutMargins = screenWidth / 17
+        cellSize = (cellSizeWithoutMargins * cellSpaceParam).toInt()
+        cellMargin = (cellSizeWithoutMargins * (1f - cellSpaceParam)).toInt()
+    }
 
+    private fun setupSound() {
+        HXSound.engines(20)
+        if (BuildConfig.DEBUG)
+            HXSound.logging(true)
         soundController = SoundController(this)
+    }
+
+    private fun setupRecycler() {
 
         // Убираем анимацию про notifyitemchanged
         (recycler.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
@@ -63,13 +99,15 @@ class HomeScreen : AppCompatActivity() {
                 )
             }
         }
+    }
 
+    fun setupButtons() {
         btnShuffle.setOnClickListener {
             shuffle()
         }
 
         btnSettings.setOnClickListener {
-//            val dialog = FullscreenDialog.newInstance();
+            //            val dialog = FullscreenDialog.newInstance();
 //            dialog.setCallback(object : FullscreenDialog.Callback {
 //                override fun onActionClick(name: String) {
 //                }
@@ -114,7 +152,6 @@ class HomeScreen : AppCompatActivity() {
             soundController?.resetSoundboard()
             recycler.adapter?.notifyDataSetChanged()
         }
-        updateBPM()
     }
 
     fun hideNavigationBar() {
